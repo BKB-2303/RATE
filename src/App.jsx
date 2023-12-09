@@ -7,6 +7,8 @@ import RATEPortal from './components/MainPortal/ExamPortal';
 import TestDashBoardPage from './components/TestDashboard/Testviewdashboard';
 import SubmissionPage from './components/SubmissionPage/SubmitPage';
 import ANIMATION from './components/AnimationRate/Animation';
+import Registrationdetails from './components/CandidateDetails/RegistrationDetails';
+import RateLandingPage from './components/RateLandingPage/LandingPage';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -21,9 +23,11 @@ function App() {
 
   return (
     <>
-      {loading && <ANIMATION  />} 
+    {/* <RateLandingPage/> */}
+    {/* <Registrationdetails/> */}
+      {/* {loading && <ANIMATION  />}  */}
       {/* < ANIMATION/> */}
-      <Router>
+      {/* <Router>
         <Routes>
           <Route path="/" element={<ENTRYSCREEN />} />
           <Route
@@ -47,7 +51,43 @@ function App() {
             element={<SubmissionPage />}
           />
         </Routes>
-      </Router>
+      </Router> */}
+      <Router>
+  <Routes>
+  <Route
+      path="/registration-details/access-page/rate-portal/test-dashboard/submission"
+      element={<SubmissionPage />}
+    />
+       <Route
+      path="/registration-details/access-page/rate-portal/test-dashboard/*"
+      element={<TestDashBoardPage />}
+    />
+     <Route
+      path="/registration-details/access-page/rate-portal/*"
+      element={<RATEPortal />}
+    />
+       <Route
+      path="/registration-details/access-page/*"
+      element={<ACCESSPAGE />}
+    />
+   
+    <Route
+      path="/registration-details/*"
+      element={<REGISTRATIONDETAILS />}
+    />
+ 
+ 
+   
+ <Route
+      path="/Testing/*"
+      element={<ENTRYSCREEN />}
+    />
+ 
+     <Route path="/" element={<RateLandingPage />} />
+
+  </Routes>
+</Router>
+
     </>
   );
 }

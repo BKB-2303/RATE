@@ -2,6 +2,18 @@
 import React, { useState } from 'react';
 import TransparentLogo from '../../assets/logo-no-background.png';
 
+
+const Dropdown = (e) => {
+  e.preventDefault();
+  return(
+  <div className="absolute mt-2 bg-black text-white p-2 flex flex-col">
+    <a href="#" className="mb-2">Test Portal</a>
+    <a href="#" className="mb-2">Admin Portal</a>
+  </div>
+
+  );
+};
+
 const Header = () => {
   const [menuVisible, setMenuVisible] = useState(false);
 
@@ -50,7 +62,7 @@ const Header = () => {
               src="https://img.icons8.com/wired/64/000000/login-rounded-right.png"
               alt="login-rounded-right"
             />
-            <a href="/login">Login</a>
+            <a href="/login" onClick={toggleMenu}>Login{menuVisible && <Dropdown />}</a>
           </div>
         </nav>
       </header>

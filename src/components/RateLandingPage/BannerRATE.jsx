@@ -20,14 +20,14 @@ export function ManualSlideshow() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative h-[600px] w-screen">
       <Carousel transition={{ duration: 2 }} className="rounded-xl">
         {images.map((image, index) => (
           <img
             key={index}
-            src={image.default} // Use the 'default' property for locally imported images
+            src={image} 
             alt={`image ${index + 1}`}
-            className={`h-full w-full object-cover ${
+            className={`absolute top-0 left-0 h-full w-full object-cover ${
               index === currentImageIndex ? '' : 'hidden'
             }`}
           />

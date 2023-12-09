@@ -66,24 +66,7 @@ import TransparentLogo from '../../assets/logo-white.png';
 import { useNavigate } from 'react-router-dom';
 import endTestSound from '../../assets/end-test-sound.mp3';
 const ExamPortalHeader = () => {
-//   const navigate = useNavigate();
-//   const [showModal, setShowModal] = useState(false);
 
-//   const handleDashboard = () => {
-//     // Show a custom modal instead of the default alert
-//     setShowModal(true);
-//   };
-
-//   const closeModal = () => {
-//     // Close the custom modal
-//     setShowModal(false);
-//   };
-
-//   const endTest = () => {
-//     // Perform navigation when the user clicks "OK" in the custom modal
-//     navigate('/registration-details/access-page/rate-portal/test-dashboard');
-//     closeModal();
-//   };
 const navigate = useNavigate();
 const [showModal, setShowModal] = useState(false);
 
@@ -146,18 +129,6 @@ const endTest = () => {
 
             <div className="flex justify-end">
             <button
-                className="bg-stone-950 text-white px-4 py-2 mr-2 rounded"
-                onClick={endTest}
-              >
-                OK
-              </button>
-              <button
-                className="bg-gray-400 text-white px-4 py-2 rounded"
-                onClick={closeModal}
-              >
-                Cancel
-              </button>
-              {/* <button
                 className="bg-stone-950 hover:bg-red-200 hover:text-red-500 text-white px-8 py-2 mr-2 rounded"
                 onClick={endTest}
               >
@@ -168,7 +139,8 @@ const endTest = () => {
                 onClick={closeModal}
               >
                 Cancel
-              </button> */}
+              </button>
+
             </div>
           </div>
         </div>
